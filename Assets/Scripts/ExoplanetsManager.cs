@@ -10,7 +10,7 @@ public class ExoplanetsManager : MonoBehaviour
     public Material[] materialsPlanets;
     private string urlAPI = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative&format=json";
 
-    void Start()
+    void Awake()
     {
         Debug.Log("Iniciando");
         StartCoroutine(GetData());

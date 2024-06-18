@@ -6,11 +6,11 @@ using System.IO;
 
 public class ManageExo : MonoBehaviour
 {
-    private string filteredFilePath = "Data/fetchFiltered.json";
+    private string filteredFilePath = "fetchFiltered.json";
     public List<Planet> planets;
     private void Awake()
     {
-        string jsonData = File.ReadAllText(Path.Combine(Application.dataPath, filteredFilePath));
+        string jsonData = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, filteredFilePath));
         planets = JsonConvert.DeserializeObject<List<Planet>>(jsonData);
         Debug.Log("Count: " + planets.Count);
     }

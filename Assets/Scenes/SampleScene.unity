@@ -132,8 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 196220735}
-  - component: {fileID: 196220734}
-  - component: {fileID: 196220736}
   - component: {fileID: 196220737}
   m_Layer: 0
   m_Name: ExoplanetManager
@@ -142,31 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &196220734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196220733}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56ed71f66a189f548b567e873d56d9af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialsPlanets:
-  - {fileID: 2100000, guid: 0f07bc7759c3ed34e839e84a71f86fe6, type: 2}
-  - {fileID: 2100000, guid: 6a5b2e1aabb2b334c9de2a52ae550588, type: 2}
-  - {fileID: 2100000, guid: b7068b5380dc4e94b9088841ec4f3198, type: 2}
-  - {fileID: 2100000, guid: 12ca74b661ebcbb439bfe4fbef4e05a4, type: 2}
-  - {fileID: 2100000, guid: 3a8c729cfbbe2e84595b37f02a6ad54d, type: 2}
-  - {fileID: 2100000, guid: e1b3fd93ccfba054dbd83fee6d7991c4, type: 2}
-  - {fileID: 2100000, guid: a157fd2e673a97b4daf2d81d1ad36a93, type: 2}
-  - {fileID: 2100000, guid: 8f9c72c4bc8408b4994e4fea3e616735, type: 2}
-  - {fileID: 2100000, guid: 674dfa7e3b34015468ac048fc82a3f65, type: 2}
-  - {fileID: 2100000, guid: 0a33a707a82cf98408a032011d9e3e48, type: 2}
-  - {fileID: 2100000, guid: 44e152fa0c2d35a47b118b79660c9048, type: 2}
-  - {fileID: 2100000, guid: 8b601b50d7e34f84db8e2bd13924041c, type: 2}
 --- !u!4 &196220735
 Transform:
   m_ObjectHideFlags: 0
@@ -182,20 +155,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &196220736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196220733}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f57220bebbb8dc438ce3d0224d6e90c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalFilePath: Data/fetch.json
-  filteredFilePath: Data/fetchFiltered.json
 --- !u!114 &196220737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,8 +1249,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
+  - {fileID: 196220735}
   - {fileID: 1627974098}
   - {fileID: 476173581}
   - {fileID: 487940518}
   - {fileID: 1504841344}
-  - {fileID: 196220735}

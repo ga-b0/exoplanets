@@ -20,12 +20,13 @@ public class ManageExo : MonoBehaviour
         string filePath = Path.Combine(Application.streamingAssetsPath, jsonFileName);
 
 #if UNITY_WEBGL
+        // WebGL requires using UnityWebRequest to read files
         UnityWebRequest www = UnityWebRequest.Get(filePath);
         yield return www.SendWebRequest();
 
         if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error JSON: " + www.error);
+            Debug.LogError("Error loading JSON: " + www.error);
         }
         else
         {
@@ -34,7 +35,6 @@ public class ManageExo : MonoBehaviour
             Debug.Log("Count: " + planets.Count);
         }
 #else
-
         if (File.Exists(filePath))
         {
             string jsonData = File.ReadAllText(filePath);
@@ -43,8 +43,9 @@ public class ManageExo : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Error JSON: " + filePath);
+            Debug.LogError("JSON file not found at: " + filePath);
         }
+        yield return null; 
 #endif
     }
 
